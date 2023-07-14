@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - program that prints all possible different combinations of two digits.
+ * main - program that prints all possible different combination of two digits.
  * Return: Always 0 (Success)
  */
 
@@ -23,5 +23,5 @@ int main(void)
 		}
 	}
 	putchar('\n');
-	return(0);
+	return (0);
 }
