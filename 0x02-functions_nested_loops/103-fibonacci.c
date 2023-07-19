@@ -12,7 +12,7 @@ int main(void)
 	long int i, x = 0, y = 1, z, sum = 0;
 
 	z = x + y;
-	for (i = 0; i <= 4000000; i++)
+	for (i = 0; z <= 4000000; i++)
 	{
 		if (z % 2 == 0)
 			sum += z;
