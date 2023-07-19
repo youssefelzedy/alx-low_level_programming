@@ -4,7 +4,6 @@
  *it prints in lowercase x10
  * Return: no return (Success)
  */
-
 void print_alphabet_x10(void)
 {
 	int i, j;
