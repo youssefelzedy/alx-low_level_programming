@@ -28,13 +28,11 @@ void print_number(int n)
 			gg /= 10;
 			mod *= 10;
 		}
-		/*printf("mod %d num %d \n", mod, n);*/
 		while (n > 0)
 		{
 			mod /= 10;
 			test = n / mod;
 			n %= mod;
-			/*printf("moz %d num %d \n", mod, n);*/
 			_putchar(test + '0');
 		}
 	}
