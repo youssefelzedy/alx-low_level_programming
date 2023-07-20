@@ -39,7 +39,7 @@ void print_number(int n)
 	}
 	while (n > 0)
 	{
-		mod /=10;
+		mod /= 10;
 		test = n / mod;
 		n %= mod;
 		_putchar(test + '0');
