@@ -32,12 +32,12 @@ void print_number(int n)
 		n = -n;
 	}
 	gg = n;
-	while (gg != 0)
+	while (gg)
 	{
 		gg /= 10;
 		mod *= 10;
 	}
-	while (n > 0)
+	while (n)
 	{
 		mod /= 10;
 		test = n / mod;
