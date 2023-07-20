@@ -3,7 +3,7 @@
 
 /**
  *print_number -  prints the number
- *@n: is an long long int 
+ *@n: is an long long int
  *Return: retrun the bigest facor num
  */
 
@@ -11,7 +11,7 @@ void print_number(int n)
 {
 	int test, mod = 1, gg;
 
-	if(n == 0)
+	if (n == 0)
 	{
 		_putchar('0');
 	}
