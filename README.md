@@ -6,3 +6,8 @@
 # 3 - 0x03. C - Debugging
 
 # 4 - 0x04. C - More functions, more nested loops
+
+# 5 - 0x05. C - Pointers, arrays and strings
+
+# 6 - 0x06. C - More pointers, arrays and strings
+
