@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 /**
- *_strncat -  to copy
+ *_strncpy -  to copy
  *@dest: is a string
  *@src: is string
  *@n: is int
