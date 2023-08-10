@@ -4,17 +4,17 @@
 #include <string.h>
 
 /**
- *_calloc - creat str with in s1 and s2
- *@nmemb: int
- *@size: int
- *Return: nothing;
+ * _calloc - creat str with in s1 and s2
+ * @nmemb: int
+ * @size: int
+ * Return: pointer
  **/
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *ptr;
 	char *ch;
-	int cnt = size * nmemb, i;
+	unsigned int cnt = size * nmemb, i;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
