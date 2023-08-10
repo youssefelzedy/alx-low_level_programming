@@ -4,18 +4,17 @@
 #include <string.h>
 
 /**
- * malloc_checked - creat array
- * @grid: width of the array
- * @height: height of the array
- * Return: ptr;
+ *malloc_checked - creat array
+ *@b: width of the array
+ *Return: ptr;
  **/
 
 void *malloc_checked(unsigned int b)
 {
 	int *ptr = malloc(b);
 
-    if (ptr == 0)
-        exit (98);
-    return (ptr);
+	if (ptr == 0)
+		exit(98);
+	return (ptr);
 
 }
