@@ -4,6 +4,18 @@
 #include <stdio.h>
 #include <ctype.h>
 /**
+ * _isdigit - checks if character is digit
+ * @c: the character to check
+ *
+ * Return: 1 if digit, 0 otherwise
+ */
+
+int _isdigit(int c)
+{
+	return (c >= '0' && c <= '9');
+}
+
+/**
  * fill - fill ans.
  * @a: int 1
  * @b: int 2
@@ -20,9 +32,7 @@ int *fill(int *a, int *b, int l1, int l2)
 	for (i = 0; i < l2; i++)
 	{
 		for (j = 0; j < l1; j++)
-		{
 			ans[i + j] += b[i] * a[j];
-		}
 	}
 	for (i = 0; i < l1 + l2; i++)
 	{
@@ -32,9 +42,34 @@ int *fill(int *a, int *b, int l1, int l2)
 	}
 	return (ans);
 }
+/**
+ * setdig - check if dig or not
+ * @s: the first big number string
+ * @l: number
+ *
+ * Return: array
+ */
+
+int *setdig(char *s, int l)
+{
+	int i, j;
+	int *a = malloc(sizeof(int) * l);
+
+	for (i = l - 1, j = 0; i >= 0; i--, j++)
+	{
+		if (!_isdigit(s[i]))
+		{
+			free(a);
+			printf("Error\n"), exit(98);
+		}
+		a[j] = s[i] - '0';
+	}
+	return (a);
+}
+
 
 /**
- *main - adds mul.
+ *main - multiply two big number strings
  *@argc: argument count
  *@argv: arguments
  *Return: 1 if a non-integer is among the passed in arguments, 0 otherwise
@@ -42,23 +77,20 @@ int *fill(int *a, int *b, int l1, int l2)
 
 int main(int argc, char *argv[])
 {
-	int i, j, l1, l2;
+	int i, l1, l2;
 	int *a, *b, *ans;
 
-	if (argc < 3 || argc > 3)
-	{
-		printf("Error\n");
-		exit(98);
-	}
+	if (argc != 3)
+		printf("Error\n"), exit(98);
 	l1 = strlen(argv[1]);
 	l2 = strlen(argv[2]);
 	a = malloc(sizeof(int) * l1);
 	b = malloc(sizeof(int) * l2);
-	ans = calloc(l1 + l2, sizeof(int));
-	for (i = l1 - 1, j = 0; i >= 0; i--, j++)
-		a[j] = argv[1][i] - '0';
-	for (i = l2 - 1, j = 0; i >= 0; i--, j++)
-		b[j] = argv[2][i] - '0';
+	ans = malloc(sizeof(int) * (l1 + l2));
+	if (ans == NULL)
+		printf("Error2\n"), exit(98);
+	a = setdig(argv[1], l1);
+	b = setdig(argv[2], l2);
 	ans = fill(a, b, l1, l2);
 	for (i = l1 + l2; i >= 0; i--)
 	{
@@ -68,6 +100,9 @@ int main(int argc, char *argv[])
 	for (; i >= 0; i--)
 		printf("%d", ans[i]);
 	printf("\n");
+	free(ans);
+	free(a);
+	free(b);
 
 	return (0);
 }
