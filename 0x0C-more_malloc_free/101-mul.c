@@ -29,6 +29,8 @@ int *fill(int *a, int *b, int l1, int l2)
 	int tmp, i, j;
 	int *ans = calloc(l1 + l2, sizeof(int));
 
+	if (!ans)
+		printf("Error\n"), exit(98);
 	for (i = 0; i < l2; i++)
 	{
 		for (j = 0; j < l1; j++)
@@ -52,9 +54,13 @@ int *fill(int *a, int *b, int l1, int l2)
 
 int *setdig(char *s, int l)
 {
-	int i, j;
+	int i, j, num = l;
 	int *a = malloc(sizeof(int) * l);
 
+	if (a == NULL)
+		printf("Error\n"), exit(98);
+	while (num--)
+		a[num] = 0;
 	for (i = l - 1, j = 0; i >= 0; i--, j++)
 	{
 		if (!_isdigit(s[i]))
@@ -88,7 +94,7 @@ int main(int argc, char *argv[])
 	b = malloc(sizeof(int) * l2);
 	ans = malloc(sizeof(int) * (l1 + l2));
 	if (ans == NULL)
-		printf("Error2\n"), exit(98);
+		printf("Error\n"), exit(98);
 	a = setdig(argv[1], l1);
 	b = setdig(argv[2], l2);
 	ans = fill(a, b, l1, l2);
