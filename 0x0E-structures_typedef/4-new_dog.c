@@ -10,7 +10,7 @@
  * Return: length of string
  */
 
-int _strlen(char *s)
+int _strlen(const char *s)
 {
 	int len = 0;
 
@@ -20,7 +20,7 @@ int _strlen(char *s)
 }
 
 /**
- * _strcpy - copy string to another
+ * _strcopy - copy string to another
  * @src: the main string
  * @dest: the copy
  *
