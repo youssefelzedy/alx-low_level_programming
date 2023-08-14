@@ -36,7 +36,6 @@ char *_strcpy(char *dest, char *src)
 	return (dest);
 }
 
-
 /**
  * new_dog - creat anew dog
  * @name: dog's name
@@ -56,13 +55,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (dd == NULL)
 		return (NULL);
 	dog->name = malloc(sizeof(char) * (_strlen(name) + 1));
-	if (dog->name == NULL)
+	if ((*dog).name == NULL)
 	{
 		free(dog);
 		return (NULL);
 	}
 	dog->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
-	if (dog->owner == NULL)
+	if ((*dog).owner == NULL)
 	{
 		free(dog);
 		return (NULL);
