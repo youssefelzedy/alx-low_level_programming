@@ -4,9 +4,10 @@
 #include <string.h>
 
 /**
- *_strlen -  print the length
- *@s: is a string
- *Return: length of string
+ * _strlen -  print the length
+ * @s: is a string
+ *
+ * Return: length of string
  */
 
 int _strlen(char *s)
@@ -22,6 +23,7 @@ int _strlen(char *s)
  * _strcpy - copy string to another
  * @src: the main string
  * @dest: the copy
+ *
  * Return: the copy @dest
  */
 
@@ -54,16 +56,17 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dd = (dog_t *) malloc(sizeof(dog_t));
 	if (dd == NULL)
 		return (NULL);
-	dog->name = malloc(sizeof(char) * (_strlen(name) + 1));
-	if ((*dog).name == NULL)
+	dd->name = malloc(sizeof(char) * (_strlen(name) + 1));
+	if (dd->name == NULL)
 	{
-		free(dog);
+		free(dd);
 		return (NULL);
 	}
-	dog->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
-	if ((*dog).owner == NULL)
+	dd->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
+	if (dd->owner == NULL)
 	{
-		free(dog);
+		free(dd->name)
+		free(dd);
 		return (NULL);
 	}
 
