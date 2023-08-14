@@ -8,7 +8,7 @@
  * @owner: owner's name
  *
  * Description: Just a lone dog struct
- * */
+ */
 
 struct dog
 {
@@ -16,3 +16,5 @@ struct dog
 	float age;
 	char *owner;
 };
+
+#endif
