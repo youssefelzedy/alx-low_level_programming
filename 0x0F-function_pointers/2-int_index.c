@@ -4,10 +4,10 @@
 #include <string.h>
 
 /**
- * int_index - ...
- * @array: ...
- * @size: ...
- * @cmp: ...
+ * int_index - function that searches for an integer.
+ * @array: function that searches for an integer.
+ * @size: function that searches for an integer.
+ * @cmp: function that searches for an integer.
  *
  * Return: Nothing.
  */
