@@ -1,15 +1,20 @@
 section .data
-    hello db "Hello, Holberton",0
+hello: db "Hello, Holberton", 0
+fmt: db "%s", 10, 0
 
 section .text
-    global main
-    extern printf
+global main
+extern printf
 
 main:
-    push rbp                ; Set up stack frame
-    mov rdi, hello          ; Load the address of hello string into rdi
-    call printf             ; Call printf function
-    add rsp, 8              ; Clean up the stack
-    mov eax, 0              ; Return 0 from main
-    pop rbp                 ; Restore original base pointer
-    ret                     ; Return from main
+	push rbp
+
+	mov rdi, hello
+	mov rdi, fmt
+	mov rax, 0
+	call printf
+
+	pop rbp
+	mov rax, 0
+
+	ret
