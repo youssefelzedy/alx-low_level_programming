@@ -1,5 +1,5 @@
 section .data
-hello: db "Hello, Holberton", 0
+msg: db "Hello, Holberton", 0
 fmt: db "%s", 10, 0
 
 section .text
@@ -9,8 +9,8 @@ extern printf
 main:
 	push rbp
 
-	mov rdi, hello
 	mov rdi, fmt
+	mov rdi, msg
 	mov rax, 0
 	call printf
 
