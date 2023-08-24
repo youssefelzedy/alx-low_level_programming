@@ -1,8 +1,5 @@
 #!/bin/bash
 
-echo "Enter your commit"
-read commmit
-
 git add .
-git commit -m "${commmit}"
+git commit -m "0x12-singly_linked_lists"
 git push origin main
